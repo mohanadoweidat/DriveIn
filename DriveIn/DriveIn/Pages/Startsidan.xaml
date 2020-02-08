@@ -4,31 +4,22 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+             NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
-             x:Class="DriveIn.MainPage">
+             x:Class="DriveIn.Pages.Startsidan">
 
-    <!--AbsoluteLayout.LayoutFlags="PositionProportional"
-               AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-               Margin="10"-->
+    <AbsoluteLayout>
 
-    <StackLayout>
-        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Margin="30">
-            <!--Search Button-->
-            <Frame BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="End">
-                <flex:FlexButton
-    WidthRequest="76"
-    HeightRequest="76"
-    CornerRadius="38"
-    HasShadow="True"
-    Icon="sr.png"
-    ForegroundColor="#ffffff"
-    HighlightForegroundColor="#49516F"
-    BackgroundColor="Red"
-    HighlightBackgroundColor="#8EA4D2" />
-            </Frame>
+        <StackLayout AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     x:Name="st" Spacing="0" VerticalOptions="FillAndExpand">
+        </StackLayout>
+        <!-- Buttons-->
+        <StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="EndAndExpand" Margin="30">
 
             <!--QR Button-->
-            <Frame BackgroundColor="Transparent" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+            <Frame BackgroundColor="Transparent">
 
                 <flex:FlexButton
     WidthRequest="76"
@@ -41,6 +32,20 @@
     BackgroundColor="Red"
     HighlightBackgroundColor="#8EA4D2" />
             </Frame>
+
+            <!--Search Button-->
+            <Frame BackgroundColor="Transparent" Margin="100,0,0,0">
+                <flex:FlexButton
+    WidthRequest="76"
+    HeightRequest="76"
+    CornerRadius="38"
+    HasShadow="True"
+    Icon="sr.png"
+    ForegroundColor="#ffffff"
+    HighlightForegroundColor="#49516F"
+    BackgroundColor="Red"
+    HighlightBackgroundColor="#8EA4D2" />
+            </Frame>
         </StackLayout>
-    </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

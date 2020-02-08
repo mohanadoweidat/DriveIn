@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriveIn.Pages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace DriveIn
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Startsidan());
         }
 
         protected override void OnStart()

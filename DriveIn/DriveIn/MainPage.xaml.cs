@@ -16,6 +16,16 @@ namespace DriveIn
         public MainPage()
         {
             InitializeComponent();
+            //ts.Tapped += Ts_Tapped;
         }
+
+        //private async void Ts_Tapped(object sender, EventArgs e)
+        //{
+        //    await ((Frame)sender).ScaleTo(0.8, 50, Easing.Linear);
+        //    //Wait a moment
+        //    await Task.Delay(100);
+        //    //Scale to normal
+        //    await ((Frame)sender).ScaleTo(1, 50, Easing.Linear);
+        //}
     }
 }
