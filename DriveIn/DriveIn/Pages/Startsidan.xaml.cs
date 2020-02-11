@@ -23,5 +23,10 @@ namespace DriveIn.Pages
             };
             st.Children.Add(map);
         }
+
+        private void FlexButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MenusPage());
+        }
     }
 }

@@ -16,36 +16,22 @@
         </StackLayout>
         <!-- Buttons-->
         <StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="EndAndExpand" Margin="30">
+                     AbsoluteLayout.LayoutBounds="0,0,1,1" Margin="30">
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <!--KS Button-->
+                <flex:FlexButton WidthRequest="76" HeightRequest="76"
+             CornerRadius="38" HasShadow="True" Icon="sr.png" ForegroundColor="#ffffff"
+             HighlightForegroundColor="#49516F" BackgroundColor="Red"
+             HighlightBackgroundColor="#8EA4D2" VerticalOptions="StartAndExpand"
+                                 Clicked="FlexButton_Clicked"/>
 
-            <!--QR Button-->
-            <Frame BackgroundColor="Transparent">
+                <!--5ra Button-->
+                <flex:FlexButton WidthRequest="76" HeightRequest="76" CornerRadius="38"
+             HasShadow="True" Icon="qr.png" ForegroundColor="#ffffff"
+             HighlightForegroundColor="#49516F" BackgroundColor="Red"
+             HighlightBackgroundColor="#8EA4D2" VerticalOptions="EndAndExpand"/>
 
-                <flex:FlexButton
-    WidthRequest="76"
-    HeightRequest="76"
-    CornerRadius="38"
-    HasShadow="True"
-    Icon="qr.png"
-    ForegroundColor="#ffffff"
-    HighlightForegroundColor="#49516F"
-    BackgroundColor="Red"
-    HighlightBackgroundColor="#8EA4D2" />
-            </Frame>
-
-            <!--Search Button-->
-            <Frame BackgroundColor="Transparent" Margin="100,0,0,0">
-                <flex:FlexButton
-    WidthRequest="76"
-    HeightRequest="76"
-    CornerRadius="38"
-    HasShadow="True"
-    Icon="sr.png"
-    ForegroundColor="#ffffff"
-    HighlightForegroundColor="#49516F"
-    BackgroundColor="Red"
-    HighlightBackgroundColor="#8EA4D2" />
-            </Frame>
+            </StackLayout>
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>
