@@ -12,6 +12,9 @@ namespace DriveIn
 {
     public partial class App : Application
     {
+        public static int ScreenHeight { get; set; }
+        public static int ScreenWidth { get; set; }
+
 
         private const string LINK = "http://windows.u7979705.fsdata.se/api/";
         private const string DI = "DriveImages";
