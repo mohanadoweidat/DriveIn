@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:dir="clr-namespace:DriveIn.Elements"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DriveIn.Pages.WelcomePage" BackgroundColor="Red">
+
+    <!--First page-->
+
+    <ContentPage>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Välkommen till vår app Drive IN! " TextColor="Black"
+                FontSize="Large" FontAttributes="Italic" HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center" Margin="20,50,20,20" />
+
+                    <Label Text="Här får du möjligheten till att handla mat snabbt utifrån vad du behöver" TextColor="Black" FontSize="Medium"
+                       FontAttributes="None" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                         Margin="10,10,10,10"></Label>
+
+                    <Label Text=" DIN ENDA UPPGIFT" TextColor="Black" FontSize="Large"
+                       FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                        Margin="10,10,10,10"></Label>
+
+                    <Label Text="Är att lägga en beställning och hämta den när det är dags, om den inte hämtas försvinner din reservation." TextColor="Black" FontSize="Medium"
+                       FontAttributes="None" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                         Margin="10,10,10,10"></Label>
+
+                    <Label Text="SEDAN BETALAR DU GENOM VALFRI METOD NÄR DU HÄMTAR DIN BESTÄLLNING" TextColor="Black" FontSize="Medium"
+                       FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                        Margin="10,10,10,10"></Label>
+
+                    <Label Text="Massa kramar " FontSize="Large" FontAttributes="Italic" TextColor="Black"
+                       HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                          Margin="30,30,30,30"></Label>
+                </StackLayout>
+            </ScrollView>
+            <Button Text="Nästa"
+                        VerticalOptions="EndAndExpand"
+                        TextColor="Black" FontSize="29"
+                        BackgroundColor="White" Padding="10" FontAttributes="Bold"
+                        BorderRadius="14" x:Name="nxttbtn"
+                        Margin="20,0,20,20" />
+        </StackLayout>
+    </ContentPage>
+
+    <!--Create account and login pages-->
+    <ContentPage>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <StackLayout Padding="10" Spacing="17">
+                <Label HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center" FontSize="47"
+                    Text="Drive IN Konto"
+                           TextColor="Black" />
+                <Frame Padding="0" CornerRadius="20" x:Name="fr1"
+                           IsClippedToBounds="True">
+                    <dir:IEntry x:Name="e_name"
+                            Placeholder="ID"
+                            HorizontalTextAlignment="Center" FontSize="28"
+                            BackgroundColor="White" TextColor="Black" />
+                </Frame>
+                <Frame Padding="0" CornerRadius="20" x:Name="fr"
+                           IsClippedToBounds="True">
+                    <dir:IEntry x:Name="e_pass" IsPassword="True"
+                            Placeholder="LÖSENORD"
+                            HorizontalTextAlignment="Center" FontSize="28"
+                            BackgroundColor="White" TextColor="Black" />
+                </Frame>
+                <Button Text="Logga in" FontSize="29" BackgroundColor="White"
+                         Margin="15,20,15,0"
+                            Padding="0" BorderRadius="14" x:Name="log_btn"
+                            TextColor="Black" />
+                <Button Text="Skapa ett konto" FontSize="29"
+                        BackgroundColor="White" TextColor="Black"
+                          Margin="15,0,15,0"
+                            Padding="0" BorderRadius="14" x:Name="crt_btn" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>
