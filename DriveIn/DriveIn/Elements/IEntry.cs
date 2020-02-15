@@ -7,7 +7,5 @@ namespace DriveIn.Elements
         public IEntry()
         {
         }
-
-        public int[] PADDING { get; set; }
     }
 }

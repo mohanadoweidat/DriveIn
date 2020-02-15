@@ -21,16 +21,15 @@
                 <!--KS Button-->
                 <flex:FlexButton WidthRequest="76" HeightRequest="76"
              CornerRadius="38" HasShadow="True" Icon="sr.png" ForegroundColor="#ffffff"
-             HighlightForegroundColor="#49516F" BackgroundColor="Red"
+             HighlightForegroundColor="#49516F" BackgroundColor="Red" x:Name="btn1"
              HighlightBackgroundColor="#8EA4D2" VerticalOptions="StartAndExpand"
-                                 Clicked="FlexButton_Clicked"/>
+                                 Clicked="FlexButton_Clicked" />
 
                 <!--5ra Button-->
                 <flex:FlexButton WidthRequest="76" HeightRequest="76" CornerRadius="38"
              HasShadow="True" Icon="qr.png" ForegroundColor="#ffffff"
              HighlightForegroundColor="#49516F" BackgroundColor="Red"
-             HighlightBackgroundColor="#8EA4D2" VerticalOptions="EndAndExpand"/>
-
+             HighlightBackgroundColor="#8EA4D2" VerticalOptions="EndAndExpand" />
             </StackLayout>
         </StackLayout>
     </AbsoluteLayout>

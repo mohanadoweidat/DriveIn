@@ -12,7 +12,12 @@
 
   <ItemGroup>
     <None Remove="bild11.jpg" />
+    <None Remove="Images\IMG_3493.JPG" />
     <None Remove="search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\IMG_3493.JPG" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +37,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Items\RestItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\CreateUserPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\LoadingScreen.xaml">

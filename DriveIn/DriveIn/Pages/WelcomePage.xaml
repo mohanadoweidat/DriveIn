@@ -5,10 +5,9 @@
              xmlns:dir="clr-namespace:DriveIn.Elements"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="DriveIn.Pages.WelcomePage" BackgroundColor="Red">
+             x:Class="DriveIn.Pages.WelcomePage" NavigationPage.HasBackButton="False" BackgroundColor="Red">
 
     <!--First page-->
-
     <ContentPage>
         <StackLayout>
             <ScrollView>

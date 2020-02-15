@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Frame xmlns="http://xamarin.com/schemas/2014/forms" 
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DriveIn.Items.RestItem" CornerRadius="12" Padding="4"
-             BackgroundColor="LightGray">
-    <Image x:Name="icon"/>
+                    xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
+             x:Class="DriveIn.Items.RestItem" Padding="0" IsClippedToBounds="True"
+             BackgroundColor="LightGray" CornerRadius="35">
+    <!--<flex:FlexButton WidthRequest="60" HeightRequest="60"
+             CornerRadius="38" HasShadow="True"
+              x:Name="btn1"
+             VerticalOptions="StartAndExpand"
+                                 Clicked="btn1_Clicked" />-->
+    <Image x:Name="icon" HeightRequest="70" WidthRequest="70" />
 </Frame>

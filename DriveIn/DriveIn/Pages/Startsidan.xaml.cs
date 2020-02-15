@@ -17,7 +17,7 @@ namespace DriveIn.Pages
         {
             InitializeComponent();
             var map = new Map(MapSpan.FromCenterAndRadius(
-               new Position(56.05883, 12.7326381), Distance.FromMiles(3)))
+            new Position(56.05883, 12.7326381), Distance.FromMiles(3)))
             {
                 IsShowingUser = true,
             };

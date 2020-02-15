@@ -2,11 +2,14 @@
 using DriveIn.Pages;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Reflection;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DriveIn.Elements;
 
 namespace DriveIn
 {
@@ -14,10 +17,8 @@ namespace DriveIn
     {
         public static int ScreenHeight { get; set; }
         public static int ScreenWidth { get; set; }
-
-
-        private const string LINK = "http://windows.u7979705.fsdata.se/api/";
-        private const string DI = "DriveImages";
+        public static Page CURRENT_PAGE;
+        public static List<Loadable> loadables = new List<Loadable>();
 
         public App()
         {
@@ -25,17 +26,19 @@ namespace DriveIn
             MainPage = new NavigationPage(new LoadingScreen());
         }
 
-        public static async Task<IImage> LoadImage(string id)
+        public static void StartLoading(string type)
         {
-            HttpClient client = new HttpClient();
-            try
+            foreach (Loadable loadable in loadables)
             {
-                var responce = await client.GetStringAsync(LINK + DI + "/" + id);
-                return JsonConvert.DeserializeObject<IImage>(responce);
+                loadable.OnLoadStarted(type);
             }
-            catch (Exception e)
+        }
+
+        public static void FinishLoading(string type)
+        {
+            foreach (Loadable loadable in loadables)
             {
-                return null;
+                loadable.OnLoadFinished(type);
             }
         }
 
@@ -53,6 +56,11 @@ namespace DriveIn
         public static ImageSource ByteToImage(byte[] b)
         {
             return ImageSource.FromStream(() => new MemoryStream(b));
+        }
+
+        public static ImageSource GetSource(string name)
+        {
+            return ImageSource.FromResource("DriveIn.Images." + name, Assembly.GetExecutingAssembly());
         }
 
         protected override void OnStart()

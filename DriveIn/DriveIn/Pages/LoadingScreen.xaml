@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DriveIn.Pages.LoadingScreen" BackgroundColor="#f2df80"
-             NavigationPage.HasNavigationBar="False">
+             x:Class="DriveIn.Pages.LoadingScreen" BackgroundColor="Red"
+             NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
     <StackLayout>
         <Label Text="Loading." FontSize="30" HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand" TextColor="White"/>
+               VerticalOptions="CenterAndExpand" TextColor="White" />
     </StackLayout>
 </ContentPage>
