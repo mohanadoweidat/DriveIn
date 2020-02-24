@@ -36,6 +36,8 @@ namespace DriveIn.Pages
                     if (a.UType == 0)
                     {
                         Navigation.PushAsync(new Startsidan());
+                        App.Current.Properties["LoggedUser"] = a.Username;
+                        App.Current.SavePropertiesAsync();
                     }
                     else
                     {

@@ -1,4 +1,5 @@
-﻿using Plugin.Permissions;
+﻿using DriveIn.Database;
+using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -37,8 +38,24 @@ namespace DriveIn.Pages
             }
             if (l == PermissionStatus.Granted)
             {
-                //Navigation.PushAsync(new Startsidan());
-                Navigation.PushAsync(new WelcomePage());
+                // Load Database
+                if (App.Current.Properties.ContainsKey("LoggedUser")
+                    && DBActions.GetAccountByName(App.Current.Properties["LoggedUser"] as string) != null)
+                {
+                    Accounts acc = DBActions.GetAccountByName(App.Current.Properties["LoggedUser"] as string);
+                    if(acc.UType == 0)
+                    {
+                        Navigation.PushAsync(new Startsidan());
+                    } else
+                    {
+                        // Admin Page
+                        //Navigation.PushAsync();
+                    }
+                }
+                else
+                {
+                    Navigation.PushAsync(new WelcomePage());
+                }
             }
             else
             {
