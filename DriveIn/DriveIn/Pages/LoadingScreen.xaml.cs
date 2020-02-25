@@ -54,16 +54,18 @@ namespace DriveIn.Pages
                 }
                 else
                 {
-                    Navigation.PushAsync(new WelcomePage());
+                    //Navigation.PushAsync(new MenuDisplayPage());
+                    Navigation.PushAsync(new Startsidan());
+                    //Navigation.PushAsync(new WelcomePage());
                 }
             }
             else
             {
-                var x = await DisplayAlert("Error", "You must allow location access!", "Retry", "Cancel");
-                if (x)
-                {
+                //var x = await DisplayAlert("Error", "You must allow location access!", "Retry", "Cancel");
+                //if (x)
+                //{
                     Ask();
-                }
+                //}
             }
         }
     }

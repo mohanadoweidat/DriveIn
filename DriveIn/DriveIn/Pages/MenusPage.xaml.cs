@@ -1,4 +1,5 @@
 ﻿using DriveIn.Items;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,26 +8,33 @@ namespace DriveIn.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenusPage : ContentPage
     {
+        int N = 4;
+
         public MenusPage()
         {
             InitializeComponent();
-            var a = new StackLayout
+            List<RestItem> list = new List<RestItem>();
+            for(int x = 0; x < 18; x++)
             {
-                Orientation = StackOrientation.Horizontal,
-                Spacing = 15,
-                Children = { new RestItem(null), new RestItem(null) }
-            };
-
-            fav.Children.Add(a);
-
-            var b = new StackLayout
+                list.Add(new RestItem(null, this));
+            }
+            StackLayout line = null;
+            for(int x = 0; x < list.Count; x++)
             {
-                Orientation = StackOrientation.Horizontal,
-                Spacing = 15,
-                Children = { new RestItem(null), new RestItem(null) }
-            };
-
-            latest.Children.Add(b);
+                if(x % N == 0)
+                {
+                    line = new StackLayout {
+                        Orientation = StackOrientation.Horizontal,
+                        Spacing = 8
+                    };
+                }
+                line.Children.Add(list[x]);
+                if(x % N == N-1 || x == list.Count - 1)
+                {
+                    fav.Children.Add(line);
+                }
+            }
+            //latest.Children.Add(b);
         }
     }
 }

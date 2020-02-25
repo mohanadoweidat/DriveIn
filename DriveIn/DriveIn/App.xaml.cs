@@ -18,28 +18,11 @@ namespace DriveIn
         public static int ScreenHeight { get; set; }
         public static int ScreenWidth { get; set; }
         public static Page CURRENT_PAGE;
-        public static List<Loadable> loadables = new List<Loadable>();
 
         public App()
         {
             InitializeComponent();
             MainPage = new NavigationPage(new LoadingScreen());
-        }
-
-        public static void StartLoading(string type)
-        {
-            foreach (Loadable loadable in loadables)
-            {
-                loadable.OnLoadStarted(type);
-            }
-        }
-
-        public static void FinishLoading(string type)
-        {
-            foreach (Loadable loadable in loadables)
-            {
-                loadable.OnLoadFinished(type);
-            }
         }
 
         //public static byte[] ImageToByte(MediaFile file)

@@ -5,21 +5,19 @@
     <StackLayout Padding="20" Spacing="10">
         <SearchBar Placeholder="sök här..." BackgroundColor="White" Margin="0,20,0,20" />
         <Frame CornerRadius="6" VerticalOptions="FillAndExpand">
-            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand">
-                <Label Text="Favoriter" FontAttributes="Bold" />
+            <StackLayout BackgroundColor="White" HeightRequest="120">
+                <Label Text="Favoriter" FontAttributes="Bold" Margin="0,0,0,10"/>
                 <ScrollView>
-                    <StackLayout x:Name="fav">
+                    <StackLayout x:Name="fav" HorizontalOptions="CenterAndExpand">
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
         </Frame>
         <Frame CornerRadius="6" VerticalOptions="FillAndExpand">
-            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand">
-                <Label Text="Senaste" FontAttributes="Bold" />
+            <StackLayout BackgroundColor="White" HeightRequest="120">
+                <Label Text="Senaste" FontAttributes="Bold" Margin="0,0,0,10"/>
                 <ScrollView>
-                    <StackLayout x:Name="latest">
+                    <StackLayout x:Name="latest" HorizontalOptions="CenterAndExpand">
                     </StackLayout>
                 </ScrollView>
             </StackLayout>

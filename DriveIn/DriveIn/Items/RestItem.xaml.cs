@@ -15,12 +15,19 @@ namespace DriveIn.Items
     public partial class RestItem : Frame
     {
         private Restaurant r;
+        private MenusPage page;
 
-        public RestItem(Restaurant r)
+        public RestItem(Restaurant r, MenusPage page)
         {
+            this.page = page;
             this.r = r;
             InitializeComponent();
             LoadIcon();
+            TapGestureRecognizer tap = new TapGestureRecognizer();
+            tap.Tapped += (s, e) => {
+                page.Navigation.PushAsync(new MenuDisplayPage());
+            };
+            GestureRecognizers.Add(tap);
         }
 
         private async void LoadIcon()

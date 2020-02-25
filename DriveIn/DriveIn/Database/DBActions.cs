@@ -24,11 +24,11 @@ namespace DriveIn.Database
 
         public static async Task LoadAccounts()
         {
-            App.StartLoading("Accounts");
+            //App.StartLoading("Accounts");
             HttpClient client = new HttpClient();
             var responce = await client.GetStringAsync(LINK + ACCOUNTS);
             accounts = JsonConvert.DeserializeObject<List<Accounts>>(responce);
-            App.FinishLoading("Accounts");
+            //App.FinishLoading("Accounts");
         }
 
         public static Accounts GetAccountByName(string u)
