@@ -43,19 +43,22 @@ namespace DriveIn.Pages
                     && DBActions.GetAccountByName(App.Current.Properties["LoggedUser"] as string) != null)
                 {
                     Accounts acc = DBActions.GetAccountByName(App.Current.Properties["LoggedUser"] as string);
-                    if(acc.UType == 0)
+                    if (acc.UType == 0)
                     {
                         Navigation.PushAsync(new Startsidan());
-                    } else
+                    }
+                    else
                     {
-                        // Admin Page
+                        // Restaurant Page
                         //Navigation.PushAsync();
                     }
                 }
                 else
                 {
+                    Navigation.PushAsync(new RestaurantPage());
                     //Navigation.PushAsync(new MenuDisplayPage());
-                    Navigation.PushAsync(new Startsidan());
+                    //Navigation.PushAsync(new MenusPage());
+                    //Navigation.PushAsync(new Startsidan());
                     //Navigation.PushAsync(new WelcomePage());
                 }
             }
@@ -64,7 +67,7 @@ namespace DriveIn.Pages
                 //var x = await DisplayAlert("Error", "You must allow location access!", "Retry", "Cancel");
                 //if (x)
                 //{
-                    Ask();
+                Ask();
                 //}
             }
         }

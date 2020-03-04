@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DriveIn.Pages.PaymentPage" BackgroundColor="DarkRed">
+
+    <StackLayout Padding="15" Spacing="10">
+        <Frame VerticalOptions="Start" CornerRadius="18">
+            <Label Text="Beställning:" TextColor="Black" HorizontalTextAlignment="Start"  HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" />
+        </Frame>
+        <Frame CornerRadius="18" VerticalOptions="FillAndExpand">
+            <ScrollView BackgroundColor="White">
+                <StackLayout Padding="5">
+                    <StackLayout VerticalOptions="StartAndExpand">
+                        <Label Text="Beställning:" TextColor="Black" HorizontalTextAlignment="Start"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" FontSize="20" FontAttributes="Bold" />
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand">
+                        <Label Text="summa=:" TextColor="Black" HorizontalTextAlignment="Start"  HorizontalOptions="StartAndExpand" VerticalOptions="End" FontSize="20" FontAttributes="Italic" />
+                        <Label Text="moms=" TextColor="Black" HorizontalTextAlignment="Start"  HorizontalOptions="StartAndExpand" VerticalOptions="End" FontSize="20" FontAttributes="Italic" />
+                        <Label Text="Totalt=" TextColor="Black" HorizontalTextAlignment="Start" VerticalOptions="EndAndExpand"  HorizontalOptions="StartAndExpand" FontSize="23" FontAttributes="None" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+        
+            <StackLayout Spacing="10" Padding="10">
+            <Button Text="Betala" Padding="10" FontSize="22" BackgroundColor="White" x:Name="Pay_btn"  BorderRadius="18" HorizontalOptions="FillAndExpand" Margin="5,5,5,5"></Button>
+            </StackLayout>
+         
+    </StackLayout>
+</ContentPage>

@@ -8,28 +8,29 @@ namespace DriveIn.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenusPage : ContentPage
     {
-        int N = 4;
+        private int N = 4;
 
         public MenusPage()
         {
             InitializeComponent();
             List<RestItem> list = new List<RestItem>();
-            for(int x = 0; x < 18; x++)
+            for (int x = 0; x < 18; x++)
             {
                 list.Add(new RestItem(null, this));
             }
             StackLayout line = null;
-            for(int x = 0; x < list.Count; x++)
+            for (int x = 0; x < list.Count; x++)
             {
-                if(x % N == 0)
+                if (x % N == 0)
                 {
-                    line = new StackLayout {
+                    line = new StackLayout
+                    {
                         Orientation = StackOrientation.Horizontal,
                         Spacing = 8
                     };
                 }
                 line.Children.Add(list[x]);
-                if(x % N == N-1 || x == list.Count - 1)
+                if (x % N == N - 1 || x == list.Count - 1)
                 {
                     fav.Children.Add(line);
                 }

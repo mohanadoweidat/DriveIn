@@ -5,13 +5,13 @@
               xmlns:dir="clr-namespace:DriveIn.Elements"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="DriveIn.Pages.CreateUserPage" BackgroundColor="Red">
+             x:Class="DriveIn.Pages.CreateUserPage" BackgroundColor="DarkRed">
 
     <StackLayout VerticalOptions="CenterAndExpand">
         <StackLayout Padding="10" Spacing="17">
             <Label HorizontalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center" FontSize="47"
-                    Text=" Skapa ett Drive IN Konto"
+                       HorizontalTextAlignment="Center" FontSize="40"
+                    Text=" Skapa ett Drive Food Konto"
                            TextColor="Black" />
             <Frame Padding="0" CornerRadius="20" x:Name="fr1"
                            IsClippedToBounds="True">

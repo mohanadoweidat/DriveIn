@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DriveIn.Pages.AboutUsPage">
+    <AbsoluteLayout>
+        <Image x:Name="bg" Aspect="Fill" AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0,0,1,1" />
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <ScrollView>
+                <StackLayout Spacing="20">
+                    <Image x:Name="logo" Margin="10,10,10,10" HeightRequest="200" />
+                    <Label Text="Drive Food" HorizontalOptions="CenterAndExpand"
+             FontSize="52" TextColor="Black" />
+                    <Frame Padding="10" CornerRadius="12" IsClippedToBounds="True"
+                           Opacity="0.6" BackgroundColor="White" Margin="10,20,10,25">
+                        <StackLayout Margin="0,10,0,15">
+                            <Label x:Name="label_main" HorizontalOptions="CenterAndExpand"
+                               HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                            <Label x:Name="label" HorizontalOptions="CenterAndExpand"
+                               HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

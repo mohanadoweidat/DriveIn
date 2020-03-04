@@ -3,15 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DriveIn.Pages.MenuDisplayPage" BackgroundColor="DarkRed">
     <StackLayout Padding="20" Spacing="10">
-        <Label Text="Favoritmenyer" HorizontalOptions="CenterAndExpand"
-               TextColor="White" FontSize="20" Margin="0,10,0,0"/>
+        <Label Text="Restaurant Info:" HorizontalOptions="CenterAndExpand"
+               TextColor="White" FontSize="20" Margin="0,10,0,0" />
+        <ScrollView BackgroundColor="White" Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="10" Padding="5">
+                <!--<ListView x:Name="Rest_list">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding RName}">
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+                <Label   Text="Restaurant Namn:"></Label>
+                <Label Text="Öppetider:" />
+                <Label Text="Address:" />
+                <Label Text="Vänte Tiden:" />
+            </StackLayout>
+        </ScrollView>
+        <!--<Label Text="Favoritmenyer:" HorizontalOptions="CenterAndExpand"
+               TextColor="White" FontSize="20" Margin="0,10,0,0" />
         <ScrollView BackgroundColor="White" Orientation="Horizontal"
                     HeightRequest="80">
             <StackLayout Orientation="Horizontal"></StackLayout>
-        </ScrollView>
-        <ScrollView BackgroundColor="White" VerticalOptions="FillAndExpand" Margin="0,50,0,0">
+        </ScrollView>-->
+        <Label Text="MENY:" TextColor="White"  HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" />
+        <ScrollView BackgroundColor="White" VerticalOptions="FillAndExpand">
+
             <StackLayout Padding="5">
-                <Label Text="MENY:" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                <ListView x:Name="Items_list" IsGroupingEnabled="True"
+                          GroupDisplayBinding="{Binding Title}" ItemTapped="Items_list_ItemTapped"
+                          ItemSelected="Items_list_ItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </ScrollView>
     </StackLayout>
