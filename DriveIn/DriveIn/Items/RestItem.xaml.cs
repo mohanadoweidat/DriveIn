@@ -24,7 +24,8 @@ namespace DriveIn.Items
             InitializeComponent();
             LoadIcon();
             TapGestureRecognizer tap = new TapGestureRecognizer();
-            tap.Tapped += (s, e) => {
+            tap.Tapped += (s, e) =>
+            {
                 page.Navigation.PushAsync(new MenuDisplayPage());
             };
             GestureRecognizers.Add(tap);

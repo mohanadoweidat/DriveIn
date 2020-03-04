@@ -13,7 +13,7 @@ using Plugin.Permissions;
 
 namespace DriveIn.Droid
 {
-    [Activity(Label = "DriveIn", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "DriveIn", Icon = "@mipmap/icons", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -54,6 +54,5 @@ namespace DriveIn.Droid
                 System.Diagnostics.Debug.WriteLine("Permission Granted!");
             }
         }
-
     }
 }

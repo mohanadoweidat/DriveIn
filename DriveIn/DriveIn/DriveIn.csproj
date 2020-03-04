@@ -12,12 +12,16 @@
 
   <ItemGroup>
     <None Remove="bild11.jpg" />
+    <None Remove="Images\gradient.png" />
     <None Remove="Images\IMG_3493.JPG" />
+    <None Remove="Images\Logo.png" />
     <None Remove="search.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\gradient.png" />
     <EmbeddedResource Include="Images\IMG_3493.JPG" />
+    <EmbeddedResource Include="Images\Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +43,9 @@
     <EmbeddedResource Update="Items\RestItem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Pages\AboutUsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\CreateUserPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -49,6 +56,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\MenusPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\OrderStatus.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\PaymentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\RestaurantPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Startsidan.xaml">

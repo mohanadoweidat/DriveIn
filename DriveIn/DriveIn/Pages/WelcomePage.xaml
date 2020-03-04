@@ -5,32 +5,32 @@
              xmlns:dir="clr-namespace:DriveIn.Elements"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="DriveIn.Pages.WelcomePage" NavigationPage.HasBackButton="False" BackgroundColor="Red">
+             x:Class="DriveIn.Pages.WelcomePage" NavigationPage.HasBackButton="False" BackgroundColor="DarkRed">
 
     <!--First page-->
     <ContentPage>
         <StackLayout>
             <ScrollView>
                 <StackLayout>
-                    <Label Text="Välkommen till vår app Drive IN! " TextColor="Black"
-                FontSize="Large" FontAttributes="Italic" HorizontalOptions="CenterAndExpand"
+                    <Label Text="Välkommen till vår app Drive Food! " TextColor="Black"
+                FontSize="19" FontAttributes="Italic" HorizontalOptions="CenterAndExpand"
                 HorizontalTextAlignment="Center" Margin="20,50,20,20" />
 
-                    <Label Text="Här får du möjligheten till att handla mat snabbt utifrån vad du behöver" TextColor="Black" FontSize="Medium"
+                    <Label Text="Denna appen är skapad av Drive Food. Med denna app kommer du kunna beställa mat från dina favorit snabbmatrestauranger. " TextColor="Black" FontSize="Large"
                        FontAttributes="None" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
                          Margin="10,10,10,10"></Label>
 
-                    <Label Text=" DIN ENDA UPPGIFT" TextColor="Black" FontSize="Large"
+                    <Label Text=" Appen är designat för att kunna betala utifrån Bank-id För ett smidigare köp genom drivethru." TextColor="Black" FontSize="Large"
                        FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
                         Margin="10,10,10,10"></Label>
 
-                    <Label Text="Är att lägga en beställning och hämta den när det är dags, om den inte hämtas försvinner din reservation." TextColor="Black" FontSize="Medium"
+                    <Label Text="Med denna app slipper du stå i kö!" TextColor="Black" FontSize="Large"
                        FontAttributes="None" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
                          Margin="10,10,10,10"></Label>
 
-                    <Label Text="SEDAN BETALAR DU GENOM VALFRI METOD NÄR DU HÄMTAR DIN BESTÄLLNING" TextColor="Black" FontSize="Medium"
+                    <!--<Label Text="SEDAN BETALAR DU GENOM VALFRI METOD NÄR DU HÄMTAR DIN BESTÄLLNING" TextColor="Black" FontSize="Medium"
                        FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
-                        Margin="10,10,10,10"></Label>
+                        Margin="10,10,10,10"></Label>-->
 
                     <Label Text="Massa kramar " FontSize="Large" FontAttributes="Italic" TextColor="Black"
                        HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
@@ -52,7 +52,7 @@
             <StackLayout Padding="10" Spacing="17">
                 <Label HorizontalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center" FontSize="47"
-                    Text="Drive IN Konto"
+                    Text="Drive Food Konto"
                            TextColor="Black" />
                 <Frame Padding="0" CornerRadius="20" x:Name="fr1"
                            IsClippedToBounds="True">

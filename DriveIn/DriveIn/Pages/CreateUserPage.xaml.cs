@@ -22,6 +22,7 @@ namespace DriveIn.Pages
             crt_btn.Clicked += Create_Clicked;
         }
 
+        //TODO Fix This
         private async void Create_Clicked(object sender, EventArgs e)
         {
             if (created)
@@ -68,6 +69,7 @@ namespace DriveIn.Pages
                     if (success)
                     {
                         await DBActions.LoadAccounts();
+                        //TODO Return to Login Page after Signing Up!
                     }
                     else
                     {

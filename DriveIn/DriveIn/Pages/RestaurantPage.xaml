@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DriveIn.Pages.RestaurantPage" NavigationPage.HasNavigationBar="False" BarBackgroundColor="DarkRed">
+
+    <!-- First page-->
+    <ContentPage Title="Lägg till Meny" IconImageSource="Menu.png">
+        <StackLayout Padding="20" Spacing="10">
+            <Label Text="Lägg till En Meny:" HorizontalOptions="CenterAndExpand"
+               TextColor="White" FontSize="20" Margin="0,10,0,0" />
+            <ScrollView BackgroundColor="White" Orientation="Vertical">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="10" Padding="5">
+                    <Label   Text="Restaurant Namn:"></Label>
+                    <Label Text="Öppetider:" />
+                    <Label Text="Address:" />
+                    <Label Text="Vänte Tiden:" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage>
+    <!-- Second page-->
+    <ContentPage Title="Reservationer" IconImageSource="Order.png">
+    </ContentPage>
+    <!-- Third page-->
+    <ContentPage Title="Inställningar" IconImageSource="Setting.png">
+        <AbsoluteLayout>
+            <StackLayout Padding="10" AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="White">
+                <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout Spacing="20">
+                        <Frame Padding="10" CornerRadius="12" IsClippedToBounds="True" Opacity="0.6"
+                               Margin="0,40,0,0">
+                            <StackLayout Orientation="Horizontal" Spacing="0">
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label Text="Inloggad som:" HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="22"
+                                     FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center" />
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label x:Name="lbl_lg" TextColor="Blue" FontAttributes="Bold"
+                       FontSize="22" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        <Button  Text="Om Oss" x:Name="about_btn" CornerRadius="18" FontSize="22" FontAttributes="Bold" />
+                    </StackLayout>
+                </ScrollView>
+                <Frame Padding="0" CornerRadius="10" IsClippedToBounds="True" HorizontalOptions="FillAndExpand"
+                 VerticalOptions="EndAndExpand" Margin="0,0,0,10">
+                    <Button Text="Logga ut" HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand" BackgroundColor="Crimson"
+                    TextColor="White" FontAttributes="Bold" FontSize="30"
+                     x:Name="logout_btn" />
+                </Frame>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage>
+</TabbedPage>
