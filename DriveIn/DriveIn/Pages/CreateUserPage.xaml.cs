@@ -20,6 +20,7 @@ namespace DriveIn.Pages
         {
             InitializeComponent();
             crt_btn.Clicked += Create_Clicked;
+            App.CURRENT_PAGE = this;
         }
 
         //TODO Fix This
@@ -51,7 +52,7 @@ namespace DriveIn.Pages
                 bool found = true;
                 foreach (Accounts users in DBActions.accounts)
                 {
-                    if (users.Username.ToLower() == n.ToLower())
+                    if (users.DUsername.ToLower() == n.ToLower())
                     {
                         found = false;
                         break;
@@ -61,15 +62,16 @@ namespace DriveIn.Pages
                 {
                     success = await DBActions.Process("adduser", new Accounts
                     {
-                        Username = n,
-                        Password = p,
-                        UType = 0
+                        DUsername = n,
+                        DPassword = p,
+                        DUType = 0
                     });
 
                     if (success)
                     {
                         await DBActions.LoadAccounts();
-                        //TODO Return to Login Page after Signing Up!
+                        await DisplayAlert("Success", "Konto har skapats!", "Ok");
+                        Navigation.PopAsync();
                     }
                     else
                     {

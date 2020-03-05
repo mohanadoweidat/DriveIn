@@ -43,7 +43,7 @@ namespace DriveIn.Pages
                     && DBActions.GetAccountByName(App.Current.Properties["LoggedUser"] as string) != null)
                 {
                     Accounts acc = DBActions.GetAccountByName(App.Current.Properties["LoggedUser"] as string);
-                    if (acc.UType == 0)
+                    if (acc.DUType == 0)
                     {
                         Navigation.PushAsync(new Startsidan());
                     }
@@ -55,10 +55,10 @@ namespace DriveIn.Pages
                 }
                 else
                 {
-                    Navigation.PushAsync(new RestaurantPage());
+                    //Navigation.PushAsync(new RestaurantPage());
                     //Navigation.PushAsync(new MenuDisplayPage());
                     //Navigation.PushAsync(new MenusPage());
-                    //Navigation.PushAsync(new Startsidan());
+                    Navigation.PushAsync(new Startsidan());
                     //Navigation.PushAsync(new WelcomePage());
                 }
             }
