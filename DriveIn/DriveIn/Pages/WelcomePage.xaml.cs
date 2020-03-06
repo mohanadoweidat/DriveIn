@@ -31,12 +31,12 @@ namespace DriveIn.Pages
             if (u != null && p != null)
             {
                 Accounts a = DBActions.GetAccountByName(u);
-                if (a != null && a.Password == p)
+                if (a != null && a.DPassword == p)
                 {
-                    if (a.UType == 0)
+                    if (a.DUType == 0)
                     {
                         Navigation.PushAsync(new Startsidan());
-                        App.Current.Properties["LoggedUser"] = a.Username;
+                        App.Current.Properties["LoggedUser"] = a.DUsername;
                         App.Current.SavePropertiesAsync();
                     }
                     else

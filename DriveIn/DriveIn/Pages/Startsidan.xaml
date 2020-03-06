@@ -14,28 +14,17 @@
                      AbsoluteLayout.LayoutBounds="0,0,1,1"
                      x:Name="st" Spacing="0" VerticalOptions="FillAndExpand">
         </StackLayout>
-        <StackLayout AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,0.1,0.1">
-            <flex:FlexButton WidthRequest="76" HeightRequest="76"
-             CornerRadius="38" HasShadow="True" Icon="sr.png" ForegroundColor="#ffffff"
+        <flex:FlexButton
+            AbsoluteLayout.LayoutBounds="10,10,76,76"
+            WidthRequest="76" HeightRequest="76"
+        CornerRadius="38" HasShadow="True" Icon="sr.png" ForegroundColor="#ffffff"
              HighlightForegroundColor="#49516F" BackgroundColor="DarkRed" x:Name="btn1"
              HighlightBackgroundColor="#8EA4D2" VerticalOptions="StartAndExpand"
                                  Clicked="FlexButton_Clicked" />
-        </StackLayout>
-        <!-- Buttons-->
-        <!--<StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,1,1" Margin="30">
-            <StackLayout HorizontalOptions="StartAndExpand">
-                -->
-        <!--KS Button-->
-
-        <!--5ra Button-->
-        <!--
-                <flex:FlexButton WidthRequest="76" HeightRequest="76" CornerRadius="38"
+        <flex:FlexButton WidthRequest="76" HeightRequest="76" CornerRadius="38"
+             x:Name="btn2"
              HasShadow="True" Icon="qr.png" ForegroundColor="#ffffff"
              HighlightForegroundColor="#49516F" BackgroundColor="DarkRed"
              HighlightBackgroundColor="#8EA4D2" VerticalOptions="EndAndExpand" />
-            </StackLayout>
-        </StackLayout>-->
     </AbsoluteLayout>
 </ContentPage>

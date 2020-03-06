@@ -7,10 +7,10 @@ namespace DriveIn.Database
     public class Accounts
     {
         public string DID { get; set; }
-        public string Username { get; set; }
+        public string DUsername { get; set; }
 
-        public string Password { get; set; }
+        public string DPassword { get; set; }
 
-        public int UType { get; set; }
+        public int DUType { get; set; }
     }
 }
