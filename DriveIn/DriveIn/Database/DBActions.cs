@@ -11,9 +11,9 @@ namespace DriveIn.Database
     internal class DBActions
     {
         private const string LINK = "http://windows.u7979705.fsdata.se/api/";
-        private const string IMAGES = "DImkages";
+        private const string IMAGES = "DImages";
         private const string ACCOUNTS = "DAccounts";
-        private const string RESTAURANTS = "DAdmins";
+        private const string RESTAURANTS = "DRestaurant";
         private const string MENUS = "DMenu";
         private const string RESERVATIONS = "DReservations";
         public static List<IImage> Images = new List<IImage>();

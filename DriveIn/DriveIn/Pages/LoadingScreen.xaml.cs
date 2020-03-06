@@ -56,10 +56,11 @@ namespace DriveIn.Pages
                 else
                 {
                     //Navigation.PushAsync(new RestaurantPage());
-                    //Navigation.PushAsync(new MenuDisplayPage());
+                    Navigation.PushAsync(new MenuDisplayPage());
                     //Navigation.PushAsync(new MenusPage());
-                    Navigation.PushAsync(new Startsidan());
+                    //Navigation.PushAsync(new Startsidan());
                     //Navigation.PushAsync(new WelcomePage());
+                    //Navigation.PushAsync(new PaymentPage());
                 }
             }
             else
