@@ -26,9 +26,11 @@
         <!--<StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutFlags="All"
                      AbsoluteLayout.LayoutBounds="0,0,1,1" Margin="30">
             <StackLayout HorizontalOptions="StartAndExpand">
-                --><!--KS Button-->
+                -->
+        <!--KS Button-->
 
-                <!--5ra Button--><!--
+        <!--5ra Button-->
+        <!--
                 <flex:FlexButton WidthRequest="76" HeightRequest="76" CornerRadius="38"
              HasShadow="True" Icon="qr.png" ForegroundColor="#ffffff"
              HighlightForegroundColor="#49516F" BackgroundColor="DarkRed"
